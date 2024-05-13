@@ -1,0 +1,27 @@
+{
+  "name": "astro-cookie-guard",
+  "version": "0.0.1",
+  "description": "Manages cookie consent in Astro applicatoins.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "astro",
+    "cookie"
+  ],
+  "author": "vLorente",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "astro": "^4.8.2",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "astro": "^4.8.2"
+  }
+}

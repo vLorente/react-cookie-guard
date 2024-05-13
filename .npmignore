@@ -1,0 +1,21 @@
+# source dirs
+src/
+
+# dependencies
+node_modules/
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# config files
+tsconfig.json
+tsup.config.ts
+
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
