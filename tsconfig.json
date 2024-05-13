@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strictest",
+  "extends": "astro/tsconfigs/strict",
   "exclude": ["**/dist/**", "**/__coverage__/**", "node_modules"],
   "compilerOptions": {
     "jsx": "preserve",
