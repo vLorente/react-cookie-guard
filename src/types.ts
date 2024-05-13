@@ -1,1 +1,3 @@
-export interface AstroCookieGuardProps {}
+export interface AstroCookieGuardProps {
+	
+}

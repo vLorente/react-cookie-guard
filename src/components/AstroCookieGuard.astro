@@ -4,31 +4,45 @@ import type { AstroCookieGuardProps } from "../types"
 
 export interface Props extends AstroCookieGuardProps {}
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div id="cookiePanel" class="cookie-panel">
-	<p>
-		{t("mainText")} <a
-			href="#">{t("learnMore")}</a>
-	</p>
-	<div class="cookie-buttons">
-		<button id="acceptCookies" class="accept-cookies">{t("accept")}</button>
-		<button id="rejectCookies" class="reject-cookies">{t("reject")}</button>
+	<div class="panel-content">
+		<p>
+			{t("mainText")} <a
+				href="#">{t("learnMore")}</a>
+		</p>
+		<div class="cookie-buttons">
+			<button id="acceptCookies" class="accept-cookies">{t("accept")}</button>
+			<button id="rejectCookies" class="reject-cookies">{t("reject")}</button>
+			<a href="#">{t("moreOptions")}</a>
+		</div>
 	</div>
 </div>
+
+<script></script>
 
 <style>
 	.cookie-panel {
 		position: fixed;
-		bottom: 0;
+		bottom: 10px;
 		left: 0;
-		width: 100%;
-		background-color: #f2f2f2;
-		padding: 15px;
-		text-align: center;
+		width: 70%;
+		border-radius: 5px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(5px);
+		padding-block: 15px;
+		margin-inline: 10px;
 		box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+		z-index: 99;
+
+		animation: panel-in 1s ease-in-out 1.5s both;
+	}
+
+	.panel-content {
+		margin: 20px;
 	}
 
 	.cookie-buttons {
@@ -43,14 +57,49 @@ const t = useTranslations(lang);
 	}
 
 	.accept-cookies {
+		border-radius: 15px;
 		background-color: #4caf50;
 		color: white;
+		transition: all 50ms ease-out;
+	}
+	
+	.accept-cookies:hover {
+		scale: 1.05;
+		filter: contrast(1.2);
+		box-shadow: 0 0 10px #4caf4fd8;
+		transition-duration: 300ms;
 	}
 
 	.reject-cookies {
+		border-radius: 15px;
 		background-color: #f44336;
 		color: white;
+		transition: all 300ms ease-out;
+	}
+
+	.reject-cookies:hover {
+		scale: 1.05;
+		filter: contrast(1.2);
+		box-shadow: 0 0 10px #f44336d8;
+		transition-duration: 300ms;
+	}
+
+
+	@keyframes panel-in {
+		from {
+			opacity: 0;
+			transform: translateY(100%);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.cookie-panel {
+			transition: none;
+		}
 	}
 </style>
-
-<script></script>
