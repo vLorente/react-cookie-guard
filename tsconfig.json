@@ -1,17 +1,13 @@
 {
+  "extends": "astro/tsconfigs/strictest",
+  "exclude": ["**/dist/**", "**/__coverage__/**", "node_modules"],
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2022",
-    "lib": ["es2022", "dom"],
-    "moduleResolution": "node10",
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": true,
     "declaration": true,
-    "outDir": "dist",
-    "noEmit": true,
-    "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
 }

@@ -1,0 +1,53 @@
+---
+import type { AstroCookieGuardProps } from "../types"
+
+export interface Props extends AstroCookieGuardProps {}
+
+---
+
+<div id="cookiePanel" class="cookie-panel">
+	<p>
+		We use cookies to ensure you get the best experience on our website. <a
+			href="#">Learn more</a>
+	</p>
+	<div class="cookie-buttons">
+		<button id="acceptCookies" class="accept-cookies">Accept</button>
+		<button id="rejectCookies" class="reject-cookies">Reject</button>
+	</div>
+</div>
+
+<style>
+	.cookie-panel {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: #f2f2f2;
+		padding: 15px;
+		text-align: center;
+		box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.cookie-buttons {
+		margin-top: 10px;
+	}
+
+	.cookie-buttons button {
+		padding: 8px 20px;
+		margin: 0 5px;
+		border: none;
+		cursor: pointer;
+	}
+
+	.accept-cookies {
+		background-color: #4caf50;
+		color: white;
+	}
+
+	.reject-cookies {
+		background-color: #f44336;
+		color: white;
+	}
+</style>
+
+<script></script>
