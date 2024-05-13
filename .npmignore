@@ -1,5 +1,6 @@
-# source dirs
-src/
+# unnecesary dirs
+test/
+website/
 
 # dependencies
 node_modules/
@@ -14,6 +15,10 @@ node_modules/
 # config files
 tsconfig.json
 tsup.config.ts
+.editorconfig
+.prettierrc.msj
+eslint.config.mjs
+.gitignore
 
 # lock files
 package-lock.json
