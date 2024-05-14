@@ -1,8 +1,10 @@
 import type { SupportedLanguages } from "./i18n/ui";
 
 export interface CookieGuardBannerProps {
-	learnMore: boolean,
-	moreOptions: boolean,
-	learnMorePage?: string,
+	// learnMore: boolean,
+	// moreOptions: boolean,
+	// learnMorePage?: string,
+	handleAccept?: () => void,
+	handleReject?: () => void,
 	lang?: SupportedLanguages
 }

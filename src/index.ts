@@ -3,7 +3,8 @@
 
 // TODO Add module configuration into Astro Integrations
 
-export { default as CookieGuardBanner } from './components/CookieGuardBanner'
-export * from './components/CookieGuardBanner'
+export { default as CookieGuardBanner } from './components/CookieGuardBanner/CookieGuardBanner'
+export * from './components/CookieGuardBanner/CookieGuardBanner'
+export * from './components/CookieGuardBanner/CookieGuardBanner.css'
 
 export * from './types'
