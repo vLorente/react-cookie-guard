@@ -1,5 +1,5 @@
 ---
-import { AstroCookieGuard } from "astro-cookie-guard"
+import { CookieGuardBanner } from "astro-cookie-guard"
 
 interface Props {
 	title: string;
@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<AstroCookieGuard></AstroCookieGuard>
+		<CookieGuardBanner client:load></CookieGuardBanner>
 		<slot />
 	</body>
 </html>

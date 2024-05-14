@@ -1,4 +1,4 @@
-# Astro Cookie Guard
+# React Cookie Guard
 
 Manages cookie consent in Astro applicatoins.
 

@@ -1,7 +1,6 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
 export default {
-	plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
 	semi: false,
 	singleQuote: false,
 	jsxSingleQuote: false,
@@ -13,9 +12,9 @@ export default {
 	arrowParens: "always",
 	overrides: [
 		{
-			files: "*.astro",
+			files: "*.txs",
 			options: {
-				parser: "astro",
+				parser: "txs",
 			},
 		},
 		{

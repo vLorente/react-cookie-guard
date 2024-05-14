@@ -1,20 +1,19 @@
 {
-  "name": "astro-cookie-guard",
+  "name": "react-cookie-guard",
   "version": "0.0.1",
-  "description": "Manages cookie consent in Astro applicatoins.",
+  "description": "Manages cookie consent in Astro applicatoins with this client side react component.",
   "types": "src/types.ts",
   "exports": {
     ".": "./src/index.ts",
     "./types": "./src/types.ts"
   },
   "scripts": {
-    "check": "astro check"
+    "build": "tsup src/index.tsx"
   },
   "keywords": [
-    "astro",
-    "astro-component",
-    "withastro",
-    "cookies"
+    "react",
+    "cookies",
+    "react-component"
   ],
   "author": {
     "name": "vLorente",
@@ -22,21 +21,17 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@astrojs/check": "^0.6.0",
     "@types/node": "^20.12.11",
-    "astro": "^4.8.2",
-    "eslint": "^8.57.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-astro": "^1.2.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
-    "eslint-plugin-promise": "^6.0.0",
+    "@types/react": "^18.3.2",
     "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "peerDependencies": {
-    "astro": "^4.8.2"
-  }
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "packageManager": "pnpm@9.1.1"
 }

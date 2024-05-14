@@ -6,7 +6,7 @@ export const languages = {
 export const defaultLang = 'en';
 
 const supportedLanguages = ["en", "es"] as const;
-type SupportedLanguages = typeof supportedLanguages[number];
+export type SupportedLanguages = typeof supportedLanguages[number];
 
 interface I18nKeys {
  mainText: string,
