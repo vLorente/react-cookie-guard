@@ -27,10 +27,7 @@ const CookieGuardBanner = (props: CookieGuardBannerProps) => {
 
 	const handleRejectCookies = () => {
 		localStorage.setItem(COOKIES_STATE, "0")
-		// TODO
-		alert(
-			"Algunas características del sitio pueden no estar disponibles sin cookies."
-		)
+		setAccepted(false)
 		handleReject()
 	}
 
