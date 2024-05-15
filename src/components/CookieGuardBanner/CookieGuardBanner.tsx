@@ -24,7 +24,7 @@ const CookieGuardBanner = (props: CookieGuardBannerProps) => {
 		setAccepted(true)
 		handleAccept()
 	}
-
+	
 	const handleRejectCookies = () => {
 		localStorage.setItem(COOKIES_STATE, "0")
 		setAccepted(false)
