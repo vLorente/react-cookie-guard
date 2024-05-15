@@ -2,13 +2,19 @@
   "name": "react-cookie-guard",
   "version": "0.0.1",
   "description": "Manages cookie consent in Astro applicatoins with this client side react component.",
-  "types": "src/types.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./types": "./src/types.ts"
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
   },
+  "types": "src/types.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup src/index.tsx"
+    "build": "tsup src/index.ts",
+    "test:unit": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [
     "react",
@@ -20,14 +26,23 @@
     "url": "https://github.com/vlorente"
   },
   "license": "MIT",
+  "homepage": "https://cookies.vlorente.dev/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vLorente/react-cookie-guard"
+  },
+  "bugs": {
+    "url": "https://github.com/vLorente/react-cookie-guard/issues"
+  },
   "devDependencies": {
     "@types/node": "^20.12.11",
     "@types/react": "^18.3.2",
     "prettier": "^3.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "vitest": "^1.6.0"
   },
   "peerDependencies": {
     "react": "^18.3.1",
