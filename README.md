@@ -1,6 +1,5 @@
 # React Cookie Guard
 
-Manages cookie consent in Astro applicatoins.
 
 ### Translations 
 

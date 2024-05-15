@@ -18,6 +18,7 @@ function App() {
   return (
     <>
       <CookieGuardBanner 
+        data-testid="cookie-banner"
         lang='es'
         configCookies='cookies'
         learnMore='policy'
