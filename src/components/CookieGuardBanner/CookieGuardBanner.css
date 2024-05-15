@@ -61,6 +61,12 @@
 	transition-duration: 300ms;
 }
 
+.link {
+    margin-right: 10px;
+    color: light-dark(rgba(#646cff), rgba(#646cff));
+    text-decoration: underline;
+}
+
 @keyframes panel-in {
 	from {
 		opacity: 0;

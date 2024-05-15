@@ -18,6 +18,9 @@ function App() {
   return (
     <>
       <CookieGuardBanner 
+        lang='es'
+        configCookies='cookies'
+        learnMore='policy'
         handleAccept={handleAccept} 
         handleReject={handleReject}/>
       <div>
