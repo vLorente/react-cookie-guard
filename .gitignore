@@ -16,6 +16,8 @@ node_modules/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# tests
 /test-results/
 /playwright-report/
 /blob-report/

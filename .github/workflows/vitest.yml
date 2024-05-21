@@ -1,0 +1,33 @@
+name: Vitest Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  avoid-redundancy:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Cancel Workflow Action
+       uses: styfle/cancel-workflow-action@0.12.1
+       with:
+        access_token: ${{ github.token }}
+  test:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm install -g pnpm && pnpm install
+    - name: Run Vitest tests
+      run: pnpm exec vitest test
+      working-directory: ./test
+    - uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: vitest-report
+        path: vitest-report/
+        retention-days: 15

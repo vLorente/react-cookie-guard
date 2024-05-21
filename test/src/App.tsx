@@ -17,9 +17,9 @@ function App() {
 
   return (
     <>
-      <CookieGuardBanner 
-        data-testid="cookie-banner"
-        lang='es'
+      <CookieGuardBanner
+        data-testid="cookieBanner"
+        lang='en'
         configCookies='cookies'
         learnMore='policy'
         handleAccept={handleAccept} 
@@ -32,7 +32,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Test App</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
