@@ -1,5 +1,7 @@
 # React Cookie Guard
 
+Manages cookie consent in React applicatoins with this component.
+
 ## Usage
 
 To start using the library, install it in your project:
