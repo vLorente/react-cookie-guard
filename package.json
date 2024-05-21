@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts",
-    "test": "vitest"
+    "test": "pnpm --filter test run test"
   },
   "keywords": [
     "react",
@@ -39,6 +39,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.12.11",
     "@types/react": "^18.3.2",
+    "@vitest/ui": "^1.6.0",
     "prettier": "^3.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
