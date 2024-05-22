@@ -44,7 +44,7 @@ const CookieGuardBanner = (props: CookieGuardBannerProps) => {
 	return (
 		<div id="cookiePanel" className="cookie-panel">
 			<div className="panel-content">
-				<p>{t("mainText")} <a href={learnMore} className="link">{t("learnMore")}</a></p>
+				<p>{t("mainText")} { learnMore && <a href={learnMore} className="link">{t("learnMore")}</a> }</p>
 				<div className="cookie-buttons">
 					{ configCookies && <a className="link" href={configCookies}>{t("configCookies")}</a> }
 					<button

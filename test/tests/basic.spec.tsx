@@ -44,6 +44,20 @@ describe("Basic functionality tests", () => {
         expect(link).toHaveAttribute('href', policyRef)
     })
 
+    it("Should not render Learn More anchor when learnMore prop is not passed", () => {
+        render(<CookieGuardBanner />)
+
+        const learnMoreLink = screen.queryByText("Learn More")
+        expect(learnMoreLink).not.toBeInTheDocument()
+    })
+
+    it("Should not render Manage cookies anchor when configCookies prop is not passed", () => {
+        render(<CookieGuardBanner />)
+
+        const learnMoreLink = screen.queryByText("Manage cookies")
+        expect(learnMoreLink).not.toBeInTheDocument()
+    })
+
     it("Should be in english by default", () => {
         render(<CookieGuardBanner />)
         const acceptButton = screen.getByText("Accept")
