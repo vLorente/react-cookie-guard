@@ -1,6 +1,7 @@
 # unnecesary dirs
 test/
 website/
+.github/
 
 # dependencies
 node_modules/
