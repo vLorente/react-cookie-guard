@@ -1,6 +1,6 @@
 {
   "name": "react-cookie-guard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Manages cookie consent in React applicatoins with this component.",
   "exports": {
     "types": "./dist/index.d.ts",
