@@ -1,6 +1,6 @@
 # React Cookie Guard
 
-Manages cookie consent in React applicatoins with this component.
+Manages cookie consent in React applications with this component.
 
 ## Usage
 
